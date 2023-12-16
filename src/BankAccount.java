@@ -19,7 +19,11 @@ public class BankAccount {
     private String customerPhone;
 
 
-
+    public void depositFunds(double depositAmount){
+        balance += depositAmount;
+        System.out.println("Deposit of $" + depositAmount + "made. New balance is $"
+                + balance);
+    }
 
     //getters
     public String getNumber(){
