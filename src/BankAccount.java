@@ -21,8 +21,20 @@ public class BankAccount {
 
     public void depositFunds(double depositAmount){
         balance += depositAmount;
-        System.out.println("Deposit of $" + depositAmount + "made. New balance is $"
+        System.out.println("Deposit of $" + depositAmount + " made. New balance is $"
                 + balance);
+    }
+
+    public void withdrawFunds(double withdrawalAmount){
+        //if statement checks if account is negative
+        if (balance - withdrawalAmount < 0 ) {
+            System.out.println("Insufficent Funds! you only have $" + balance +
+                    " in your account.");
+        }else {
+            balance -= withdrawalAmount;
+            System.out.println("Withdrawal of $" + withdrawalAmount + " debited. New balance is $"
+                + balance);
+        }
     }
 
     //getters
